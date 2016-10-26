@@ -9,20 +9,24 @@
   </head>
   <body>
     <div class="container">
-      <h1>Pig Latin Translator</h1>
-
+      <div class="jumbotron">
+        <h1>Pig Latin Translator</h1>
+      </div>
       <form id="pig-latin">
         <div class="form-group">
-          <label for="pig-latin">Enter a phrase to see it in Pig Latin:</label>
+          <label for="pig-latin">Enter a phrase to see it in Pig Latin:</label><br>
           <input id="userInput" type="text">
         </div>
-
-        <button type="submit" class="btn">Find out!</button>
+        <button type="submit" class="btn btn-warning">Find out!</button>
       </form>
 
-      <div id="result">
-        <p></p>
+      <div id="output" class="well">
+        <p><strong>Here's your phrase!</strong></p>
+        <br>
+        <span id="result"></span>
+        <img src="img/pig.jpg" alt="image of talking pig">
       </div>
+
     </div>
   </body>
 </html>

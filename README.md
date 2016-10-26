@@ -6,7 +6,7 @@
 
 ## Description
 
-* _The program performs the following steps of behavior driven development:
+* The program performs the following steps of behavior driven development:
 
 ##### 1 The program does nothing to non-alphabetical characters, since they do not contain consonants or vowels.
 Input: 3
@@ -71,7 +71,7 @@ Output: ealsquay
 
 ##### 13 Steps 1-12 work for multi word strings
 Input: Pig Latin Translator
-Output: igPay atinLay ranslatorTay_
+Output: igPay atinLay ranslatorTay
 
 ## Setup/Installation Requirements
 

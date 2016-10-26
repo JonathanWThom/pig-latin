@@ -60,6 +60,7 @@ $(document).ready(function() {
       alert("Please only use letters");
     } else {
       $("#result").text(translated);
+      $("#output").show();
     }
   });
 });
