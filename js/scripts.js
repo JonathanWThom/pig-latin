@@ -6,41 +6,54 @@ function hasNumbers(originalSentence) {
   return /\d/.test(originalSentence);
 }
 
+
 function pigLatin(originalSentence) {
-  var sentenceArray = originalSentence.split("");
+  var superFinalSentence = [];
+  var wordsArray = originalSentence.split(" ");
+  console.log(wordsArray);
 
-if (((sentenceArray[0]) === "Q" || (sentenceArray[0]) === "q") && ((sentenceArray[1]) === "U" || (sentenceArray[1]) === "u")) {
-  var qArray = sentenceArray.shift();
-  console.log("double q?");
-  sentenceArray.push(qArray);
-  var finalQArray = sentenceArray.shift();
-  sentenceArray.push(finalQArray);
-};
+  wordsArray.forEach(function(word) {
 
-if (((sentenceArray[0]) === "S" || (sentenceArray[0]) === "s") && ((sentenceArray[1]) === "Q" || (sentenceArray[1]) === "q")) {
-  var SqArray = sentenceArray.shift();
-  console.log("double q?");
-  sentenceArray.push(SqArray);
-  var secondSqArray = sentenceArray.shift();
-  sentenceArray.push(secondSqArray);
-  var finalSqArray = sentenceArray.shift();
-  sentenceArray.push(finalSqArray);
-};
+    var sentenceArray = word.split("");
 
-  for (i = 0; i < sentenceArray.length; i++) {
-    consonants.forEach(function(consonant) {
-      if (consonant === sentenceArray[0]) {
-        var consonantArray = sentenceArray.shift();
-        sentenceArray.push(consonantArray);
-      }
+    if (((sentenceArray[0]) === "Q" || (sentenceArray[0]) === "q") && ((sentenceArray[1]) === "U" || (sentenceArray[1]) === "u")) {
+      var qArray = sentenceArray.shift();
+      sentenceArray.push(qArray);
+      var finalQArray = sentenceArray.shift();
+      sentenceArray.push(finalQArray);
+    };
+
+    if (((sentenceArray[0]) === "S" || (sentenceArray[0]) === "s") && ((sentenceArray[1]) === "Q" || (sentenceArray[1]) === "q")) {
+      var SqArray = sentenceArray.shift();
+      sentenceArray.push(SqArray);
+      var secondSqArray = sentenceArray.shift();
+      sentenceArray.push(secondSqArray);
+      var finalSqArray = sentenceArray.shift();
+      sentenceArray.push(finalSqArray);
+    };
+
+      for (i = 0; i < sentenceArray.length; i++) {
+        consonants.forEach(function(consonant) {
+          if (consonant === sentenceArray[0]) {
+            var consonantArray = sentenceArray.shift();
+            sentenceArray.push(consonantArray);
+          }
+        });
+     }
+
+      sentenceArray.push("ay");
+      var finalSentence = sentenceArray.join("");
+      console.log(finalSentence);
+      //return finalSentence;
+
+      superFinalSentence.push(finalSentence);
+
     });
- }
+  var superDuperFinalSentence = superFinalSentence.join(" ");
+  console.log(superDuperFinalSentence);
+  return superDuperFinalSentence;
 
-  sentenceArray.push("ay");
-  finalSentence = sentenceArray.join("");
-  console.log(finalSentence);
-  return finalSentence;
-};
+}
 
 
 // UI
