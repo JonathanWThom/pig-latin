@@ -13,6 +13,9 @@ function pigLatin(originalSentence) {
       console.log(sentenceArray);
     }
   });
+
+  finalSentence = sentenceArray.join("");
+  console.log(finalSentence);
 };
 
 
