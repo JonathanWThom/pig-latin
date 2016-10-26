@@ -11,7 +11,7 @@ function pigLatin(originalSentence) {
 
   vowels.forEach(function(vowel) {
     if (vowel === sentenceArray[0]) {
-      sentenceArray.push("ay");
+      // sentenceArray.push("ay");
     }
   });
 
@@ -19,11 +19,12 @@ function pigLatin(originalSentence) {
     consonants.forEach(function(consonant) {
       if (consonant === sentenceArray[0]) {
         var consonantArray = sentenceArray.shift();
-        sentenceArray.push(consonantArray[0]);
-        sentenceArray.push("ay");
+        sentenceArray.push(consonantArray);
+        // sentenceArray.push("ay");
       }
     });
 
+  sentenceArray.push("ay");  
   finalSentence = sentenceArray.join("");
   console.log(finalSentence);
   return finalSentence;
