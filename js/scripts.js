@@ -9,22 +9,21 @@ function hasNumbers(originalSentence) {
 function pigLatin(originalSentence) {
   var sentenceArray = originalSentence.split("");
 
-  vowels.forEach(function(vowel) {
-    if (vowel === sentenceArray[0]) {
+  // vowels.forEach(function(vowel) {
+  //   if (vowel === sentenceArray[0]) {
+  //     // sentenceArray.push("ay");
+  //   }
+  // });
+
+  consonants.forEach(function(consonant) {
+    if (consonant === sentenceArray[0]) {
+      var consonantArray = sentenceArray.shift();
+      sentenceArray.push(consonantArray);
       // sentenceArray.push("ay");
     }
   });
 
-
-    consonants.forEach(function(consonant) {
-      if (consonant === sentenceArray[0]) {
-        var consonantArray = sentenceArray.shift();
-        sentenceArray.push(consonantArray);
-        // sentenceArray.push("ay");
-      }
-    });
-
-  sentenceArray.push("ay");  
+  sentenceArray.push("ay");
   finalSentence = sentenceArray.join("");
   console.log(finalSentence);
   return finalSentence;
