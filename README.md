@@ -11,12 +11,14 @@ _*The program performs the following steps of behavior driven development:
 #1 The program does nothing to non-alphabetical characters, since they do not contain consonants or vowels.
 Input: 3
 Output: 3
+
 #2 The program adds "ay" to single-letter words beginning with a vowel.
 Input: i
 Output: iay
 #2.1 also for capital letters
 Input: I
 Output: Iay
+
 #3 if a multicharacter word starting with a vowel, add "ay" to the end
 Input: outcome
 Output: outcomeay

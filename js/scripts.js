@@ -1,8 +1,12 @@
 // business
 
+function hasNumbers(originalSentence) {
+  return /\d/.test(originalSentence);
+}
 
+function pigLatin(originalSentence) {
 
-
+ }
 
 
 
@@ -14,9 +18,13 @@ $(document).ready(function() {
     event.preventDefault();
 
     var originalSentence = $("input#userInput").val();
+    var isNumber = hasNumbers(originalSentence);
     var translated = pigLatin(originalSentence);
 
-    $("#results").text(translated);
-
+    if (isNumber === true) {
+      alert("Please only use letters");
+    } else (
+      $("#result").text(translated);
+    )
   });
 });
