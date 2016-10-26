@@ -1,12 +1,19 @@
 // business
+var vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
 
 function hasNumbers(originalSentence) {
   return /\d/.test(originalSentence);
 }
 
 function pigLatin(originalSentence) {
-
- }
+  var sentenceArray = originalSentence.split("");
+  vowels.forEach(function(vowel) {
+    if (vowel === sentenceArray[0]) {
+      sentenceArray.push("ay");
+      console.log(sentenceArray);
+    }
+  });
+};
 
 
 
@@ -23,8 +30,8 @@ $(document).ready(function() {
 
     if (isNumber === true) {
       alert("Please only use letters");
-    } else (
+    } else {
       $("#result").text(translated);
-    )
+    }
   });
 });
